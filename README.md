@@ -9,6 +9,7 @@ Quick start:
 ------------
 
 1. Build and install the package with "debuild" tool and dpkg
+   (you will have to install "devscripts" and "dh-exec")
 
     $ debuild -us -uc
 
@@ -21,6 +22,16 @@ Quick start:
 On bootup, you will be asked to insert your yubikey (2.2 or newer) which
 will then provide the response.  If you do not want to use a yubikey,
 press enter and then enter a normal passphrase during bootup.
+
+Setup your YubiKey
+------------------
+
+All, but the first generation, YubiKeys can be used.
+
+The following command will generate a new secret and program it into Slot 2.
+(Any existing data in Slot2 will be overwritten and lost!)
+
+    # ykpersonalize -2 -ochal-resp -ochal-hmac -ohmac-lt64 -oserial-api-visible
 
 Change the key
 --------------
