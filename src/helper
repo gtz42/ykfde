@@ -17,7 +17,7 @@ udevadm settle || true
 R="$(ykchalresp $YKOPTS "$(cat /etc/yubikey-challenge)" 2>/dev/null || true )"
 if [ -z "$R" ]; then
     echo "Please insert yubikey or press enter to use password unlocking" >&2
-    read a
+    read -t 5 a || true
     R="$(ykchalresp $YKOPTS "$(cat /etc/yubikey-challenge)" 2>/dev/null || true)"
 fi
 
