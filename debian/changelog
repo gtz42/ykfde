@@ -1,3 +1,10 @@
+ykfde (3+unix+2) bullseye-unix; urgency=medium
+
+  * add timout when waiting for YubiKey
+  * update location of crypttab in initrd
+
+-- Goetz Salzmann <goetz-git@blacknet.de>  Sun, 22 Jan 2023 15:25:00 +0100
+
 ykfde (3+uxix+1) jessie-uxix; urgency=medium
 
   * merged with github/ainfosec-henselb

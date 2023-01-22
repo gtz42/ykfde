@@ -1,4 +1,6 @@
 #!/bin/bash -e
+#
+# will be called /usr/sbin/ykfdectl
 
 # set the defaults
 YKOPTS="-2"
