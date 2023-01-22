@@ -21,7 +21,7 @@ prereqs)
 esac
 
 if [ -e /etc/yubikey-challenge ]; then
-    CRYPTTAB="/cryptroot/CRYPTTAB"
+    CRYPTTAB="/cryptroot/crypttab"
     [ -f "/conf/conf.d/cryptroot" ] && CRYPTTAB="/conf/conf.d/cryptroot"
     sed -i 's|$|,keyscript=/sbin/ykfde-keyscript|' ${CRYPTTAB}
 fi
