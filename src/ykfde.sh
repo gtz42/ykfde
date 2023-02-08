@@ -1,6 +1,10 @@
-#!/bin/bash -e
+#!/bin/bash
 #
 # will be called /usr/sbin/ykfdectl
+
+# enable strict mode
+set -euo pipefail
+IFS=$'\n\t'
 
 # set the defaults
 YKOPTS="-2"
